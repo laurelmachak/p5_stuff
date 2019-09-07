@@ -32,9 +32,26 @@ let categories = {
     'lanthanide': [255, 204, 255],
 }
 
+// async function get_json(){
+//     let element_file = './Periodic-Table-JSON/PeriodicTableJSON.json';
+//     const proxy = 'https://cors-anywhere.herokuapp.com/'
+//     let response = await fetch(proxy + element_file);
+//     console.log(response);
+//     let data = await response.json();
+//     console.log(data);
+//     return data;
+// }
+
 function preload(){
-    let element_file = './Periodic-Table-JSON/PeriodicTableJSON.json';
-    element_data = loadJSON(element_file);
+    // element_data = get_json();
+    // let element_file = './Periodic-Table-JSON/PeriodicTableJSON.json';
+    const link = 'https://api.myjson.com/bins/s1kpj';
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    element_data = loadJSON(proxy+link);
+    // element_data = loadJSON(element_file);
+    // element_data = get_data();
+    // console.log(element_data);
+    // element_data = httpGet(element_file);
 }
 
 
