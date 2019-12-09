@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
         initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <title>template</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <ul>
-            <li>
-                <a href="sound_vizualizer/index.html">Music Visualizer</a>
-            </li>
-            <li>
-                <a href="sine_wave/index.html">Sine Wave</a>  
-            </li>
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-            <li>
-                <a href="periodic_table/index.html">Periodic Table</a>
-            </li>
+<body>
 
-            <li>
-                <a href="sprite_animation/index.html">Sprite Animation</a>
-            </li>
+    <div id="projects_container">
 
-        </ul>
-        <script src="script.js"></script>
-    </body>
+
+    </div>
+
+
+
+    <template id="project_template">
+
+        <div class="project_container">
+            <h2 class="project_title">Title</h2>
+            <p class="project_description">Lorem Ipsum whatever</p>
+
+            <div class="project_links">
+
+                    <a class="link_btn demo_link">
+                            <h3>
+                             demo
+                            </h3>
+                          </a>
+                        
+                        
+                           <a class="link_btn repo_link">
+                            <h3>
+                             repo
+                            </h3>
+                          </a>
+
+            </div>
+        </div>
+        <!-- <div class="project_container">
+                <h2>
+                    <a class="project_title project_link"></a>
+                </h2>
+                <p class="project_description"></p>
+            </div> -->
+        <!-- <a class="project_link project_container">
+                <h2 class="project_title"></h2>
+                <p class="project_description"></p>
+            </a> -->
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
