@@ -2,3 +2,42 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    min-height: 100vh;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+li{
+    border: 1px solid #282828;
+    display: block;
+    
+}
+
+a{
+    text-decoration: none;
+    display: block;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    color: white;
+    background-color: #282828;
+}
+
+a:hover{
+    background-color:black;
+}
+
+
+
