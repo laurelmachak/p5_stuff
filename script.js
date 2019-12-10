@@ -2,28 +2,32 @@ let projects = [
     {
         "name": "Music Visualizer",
         "href": "sound_vizualizer/index.html",
-        "description": "using p5's webgl functionality to render a 3d grid. Adding Z axis. Moves Origin",
+        "description": 
+        "A 3d music visualization of a song's frequencies, mapped to a grid. This project uses webgl and p5's Audio library. (DESKTOP ONLY)",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/sound_vizualizer"
     },
 
     {
-        "name": "periodic table",
+        "name": "Periodic Table",
         "href": "periodic_table/index.html",
-        "description": "TODO",
+        "description": 
+        "An interactive periodic table drawn from a set of json data. You can click on each element to display it's name in the output below. I am planning on displaying the descriptions in that output as well.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/periodic_table"
     },
 
     {
         "name": "Sine Wave",
         "href": "sine_wave/index.html",
-        "description": "todo",
+        "description": 
+        "A simple animation where a group of circles move along a sine wave. This is one of my first attempts at using tranformations, and learning p5's push and pop methods to move the origin for each circle.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/sine_wave"
     },
 
     {
         "name": "Sprite Animation",
         "href": "sprite_animation/index.html",
-        "description": "todo",
+        "description": 
+        "A set of re-usable scripts and classes to load and use a sprite sheet.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/sprite_animation"
     },
 
