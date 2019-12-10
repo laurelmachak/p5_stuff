@@ -44,12 +44,12 @@ let projects = [
         "description": "todo",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/nature_of_code/vectors"
     },
-
+    {
     "name": "Snap to Grid",
     "href": "snap_to_grid/index.html",
     "description": "todo",
     "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/snap_to_grid"
-
+    }
 
 ];
 
