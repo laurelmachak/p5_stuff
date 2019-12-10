@@ -15,6 +15,7 @@
 
 body{
     min-height: 100vh;
+    background-color: #282828;
 }
 
 .page {
@@ -72,11 +73,54 @@ body{
    /*  align-items: stretch; */
    /* background-color: #181a29; */
    /* border-radius: 5px; */
-   /* overflow: hidden; */
+   overflow: hidden;
    border: 1px solid orange;
+   position: relative;
    }
+
+   .demo_link{
+     text-decoration: none;
+   }
+
+   .project_screenshot{
+     width: 100%;
+     display: block;
+   }
+
+  .project_info{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #181a29;
+    color: white;
+  }
+
+ /* .project_description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #181a29;
+    color: white;
+  } */
+  
+  .project_container:hover .project_info {
+    opacity: 1;
+  }
    
-   .project_title{
+   /* .project_title{
     text-align: center;
     background-color: #3c4245;
     color: white;
@@ -84,10 +128,8 @@ body{
    }
    
    .project_description{
-   /*  height: 50%; */
     background-color: #181a29;
     color: white;
-    /* flex-grow: 4; */
     height: calc(300px - 50px - 30px);
    }
    
@@ -97,8 +139,6 @@ body{
     text-align: center;
     color: white;
     height: 50px;
-    /* flex-grow: 1; */
-   /*  margin-bottom: 0px; */
    }
    
    .link_btn{
@@ -113,7 +153,6 @@ body{
    }
 
    .link_btn:hover{
-    /* opacity: 0.5; */
     filter: brightness(80%);
    }
    
@@ -123,14 +162,14 @@ body{
    
    .repo_link{
     background-color: #5f6769;
-   }
+   } */
 
 
    /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-    body {
-      background-color: #F09A9D; /* Red */
-    }
+    /* body {
+      background-color: #F09A9D;
+    } */
   }
   
   /* Tablet Styles */
