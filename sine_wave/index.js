@@ -9,9 +9,16 @@ let speed = 0; //the first node that adds after each loop
 let amp; // wave height
 let lambda; // wave length
 let nodes; // number of circles in wave
-let spacing = 35; // space between each circle
+let spacing = 25; // space between each circle
 let G = 200; // green in rgb
 let B = 100; // blue in rgb
+
+let amp_slider;
+let amp_slider_label;
+
+let lambda_slider;
+let lambda_slider_label;
+
 
 function setup(){
  canvas = createCanvas(800,500);
@@ -19,6 +26,16 @@ function setup(){
  amp = height/8;
  lambda = width/2;
  nodes = width/spacing;
+
+ amp_slider = createSlider(0, height/2, amp, 0);
+ amp_slider.changed(change_amp);
+ amp_slider_label = createP("Amp: " + amp);
+
+ lambda_slider = createSlider(0,width,lambda,0);
+ lambda_slider.changed(change_lambda);
+ lambda_slider_label = createP("Lambda: " + lambda);
+
+ 
 }
 
 function draw(){
@@ -58,4 +75,15 @@ function mouseReleased(){
 
 function sine_wave(amplatude, x, lam){
  translate(x, (amplatude * sin((TWO_PI/lam) * x)));
+}
+
+function change_amp(){
+    amp = amp_slider.value();
+    amp_slider_label.html("Amp: " + amp);
+    
+}
+
+function change_lambda(){
+    lambda = lambda_slider.value();
+    lambda_slider_label.html("Lambda: " + lambda);
 }
