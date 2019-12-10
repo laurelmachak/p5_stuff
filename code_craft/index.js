@@ -6,6 +6,7 @@ let size = 35;
 let player;
 let test_inventory;
 let bottom_grid_y;
+let right_grid_x;
 
 let materials = {
     'dirt': {
@@ -46,11 +47,14 @@ function setup() {
     r = 20;
     c = 20;
     bottom_grid_y = r * size + offset;
+    right_grid_x = c * size + offset;
     grid = new Grid(offset, offset, r, c);
     // grid.generate();
     player = new Player();
     test_inventory = new Inventory();
     console.log(test_inventory.items);
+
+    textSize(size/2);
 
     frameRate(30);
     
@@ -62,6 +66,8 @@ function draw() {
     grid.show();
     player.move();
     player.display();
+    test_inventory.display();
+    display_instructions();
 
 }
 
@@ -76,6 +82,7 @@ function keyPressed(){
         if (player.current_cell.on){
             console.log(player.current_cell.material.name);
             test_inventory.add_item(player.current_cell.material.name);
+            console.log(test_inventory.items);
             player.current_cell.on = false;
         }
         
@@ -229,6 +236,11 @@ class Inventory{
     constructor(){
         this.items = new Object();
         this.create_intentory();
+        this.start_x = right_grid_x + offset;
+        this.start_y = offset;
+        this.positions = new Object();
+        this.create_positions();
+
     }
 
     create_intentory(){
@@ -239,8 +251,40 @@ class Inventory{
         }
     }
 
+    create_positions(){
+        let material_keys = Object.keys(materials);
+
+        for (let i=0; i<material_keys.length; i++){
+            this.positions[material_keys[i]] = {
+                "x": this.start_x,
+                "y": this.start_y + (i*(size + offset))
+            }
+        }
+    }
+
     add_item(material){
         this.items[material] += 1;
-        console.log(this.items);
     }
+
+    display(){
+        for (var key in this.items){
+            noStroke();
+            fill(materials[key].color);
+            let x = this.positions[key].x;
+            let y = this.positions[key].y;
+            rect(x, y, size, size);
+            fill(255);
+            // textAlign(CENTER, CENTER);
+            text(key + ": " +this.items[key], x+size, y+size/2);
+        }
+    }
+}
+
+
+function display_instructions(){
+    fill(255);
+    let x = offset;
+    let y = bottom_grid_y + offset + size;
+    let instructions = "Use arrow keys to move, and space key to collect items";
+    text(instructions, x, y);
 }
