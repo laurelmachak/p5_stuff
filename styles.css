@@ -38,6 +38,11 @@ body{
       text-align: center;
   }
 
+  .header > a{
+    text-decoration: none;
+    text-decoration: underline;
+  }
+
   .section {
     width: 100%;
     height: 300px;
