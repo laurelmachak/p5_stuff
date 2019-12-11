@@ -48,12 +48,26 @@ function setup() {
 }
 
 function draw() {
-    background(240);
+    background(20);
     character.animate();
     character.show();
 
     if (keyIsDown(RIGHT_ARROW)){
         character.x = (character.x + 2) % width;
+    }
+
+    // BELOW TODO: fix so correct sprite tiles are pointing in correct direction
+
+    if (keyIsDown(LEFT_ARROW)){
+        character.x = (character.x - 2) % width;
+    }
+
+    if (keyIsDown(DOWN_ARROW)){
+        character.y = (character.y + 2) % height;
+    }
+
+    if (keyIsDown(UP_ARROW)){
+        character.y = (character.y - 2) % height;
     }
 
     
