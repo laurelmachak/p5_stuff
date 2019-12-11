@@ -8,7 +8,7 @@ m = new Mover();
 }
 
 function draw(){
- background(240);
+ background(40);
  m.update();
  m.check_edges();
  m.display();
@@ -26,7 +26,7 @@ class Mover{
 
     display(){
         stroke(0);
-        fill(175);
+        fill(0, 153, 153);
         ellipse(this.loc.x, this.loc.y, 16, 16);
     }
 

@@ -44,7 +44,7 @@ let projects = [
     },
 
     {
-        "name": "Vectors Attempt",
+        "name": "Follow the Mouse",
         "href": "nature_of_code/vectors/index.html",
         "description": "todo",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/nature_of_code/vectors",
