@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 :root {
-  --font: 'Share Tech Mono', monospace;
+  --font: 'Roboto Mono', monospace;
+  --font-color: #f9f5d7;
+  --bg-main: #9ec4b2;
+  --bg-2: #e59c41;
+  --accent-color: #949600;
+}
+
+/* :root {
+  --font: 'Roboto Mono', monospace;
   --font-color: #f9f5d7;
   --bg-main: #282828;
   --bg-2: #474554;
-  --accent-color: #26bcce;
-}
+  --accent-color: #004f57;
+} */
 
 * {
   margin: 0;
@@ -85,13 +94,14 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 500ms ease;
+  transition-property: opacity;
   background-color: var(--bg-2);
   color: var(--font-color);
 }
 
 .project_container:hover .project_info {
-  opacity: 1;
+  opacity: .9;
 }
 
 /* Mobile Styles */
