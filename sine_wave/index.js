@@ -39,9 +39,9 @@ function setup(){
 }
 
 function draw(){
- background(240);
+ background(40);
  translate(0,height/2); // move origin of Y to halfway down
- stroke(0);
+ stroke(255);
  line(0,0,width,0); // draw a line across from origin to end of canvas
  
  
