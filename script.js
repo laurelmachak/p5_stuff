@@ -38,7 +38,8 @@ let projects = [
     {
         "name": "Code Craft",
         "href": "code_craft/index.html",
-        "description": "todo (also tbh add instructions in code craft html)",
+        "description": 
+        "A tiny grid based game where you collect resources! Resources are randomly placed on the grid on each load.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/code_craft",
         "img": "pics/code_craft.png"
     },
@@ -46,14 +47,16 @@ let projects = [
     {
         "name": "Follow the Mouse",
         "href": "nature_of_code/vectors/index.html",
-        "description": "todo",
+        "description": 
+        "A little dot follows the mouse using the p5Vector object.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/nature_of_code/vectors",
         "img": "pics/vectors.png"
     },
     {
         "name": "Snap to Grid",
         "href": "snap_to_grid/index.html",
-        "description": "todo",
+        "description": 
+        "A set of reusable scripts that allow you to build drag and drop interfaces that snap an object to a grid of specified unit size.",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/snap_to_grid",
         "img": "pics/snap_to_grid.png"
     },
