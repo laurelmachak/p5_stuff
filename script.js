@@ -56,6 +56,14 @@ let projects = [
     "description": "todo",
     "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/snap_to_grid",
     "img": "pics/snap_to_grid.png"
+    },
+
+    {
+        "name": "Mini Paint",
+        "href": "mini_paint/index.html",
+        "description": "a tiny paint program",
+        "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/mini_paint",
+        "img": "mini_paint.png"
     }
 
 ];
