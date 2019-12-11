@@ -64,6 +64,14 @@ let projects = [
         "description": "a tiny paint program",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/mini_paint",
         "img": "pics/mini_paint.png"
+    },
+    
+    {
+        "name": "Flower Generator",
+        "href": "flower_generator/index.html",
+        "description": "Generates random flower shapes where mouse is clicked",
+        "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/flower_generator",
+        "img": "pics/flower_generator.png"
     }
 
 ];
