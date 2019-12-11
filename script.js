@@ -63,7 +63,7 @@ let projects = [
         "href": "mini_paint/index.html",
         "description": "a tiny paint program",
         "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/mini_paint",
-        "img": "mini_paint.png"
+        "img": "pics/mini_paint.png"
     }
 
 ];
