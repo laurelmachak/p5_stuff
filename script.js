@@ -91,8 +91,8 @@ projects.forEach(function (proj) {
     var demo_link = project_clone.querySelector(".demo_link");
     demo_link.setAttribute("href", proj.href);
 
-    // var repo_link = project_clone.querySelector(".repo_link");
-    // repo_link.setAttribute("href", proj.repo);
+    var repo_link = project_clone.querySelector(".repo_link");
+    repo_link.setAttribute("href", proj.repo);
 
     var project_title = project_clone.querySelector('.project_title');
     project_title.textContent = proj.name;
