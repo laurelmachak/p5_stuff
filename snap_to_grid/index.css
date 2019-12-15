@@ -1,7 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tools{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tools > *{
+    margin-top: 10px;
+}
+
 #container{
-    width:800px;
+    /* width:800px;
     height: 500px;
-    margin: auto;
-    margin-top: 30px;
-    border: 1px solid black;
+    margin: auto; */
+    margin-top: 10px;
+    /* border: 1px solid black; */
 }

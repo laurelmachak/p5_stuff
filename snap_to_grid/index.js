@@ -1,9 +1,14 @@
 
-let tile;
-let tile2;
 let cell_size = 20;
-
 let rows, cols;
+let tiles = [];
+
+let show_grid = true;
+let toggle_grid_lines_btn = document.getElementById("toggle_grid_lines");
+
+let cell_size_input = document.getElementById("cell_size_input");
+
+let add_tile_btn = document.getElementById("add_tile_btn");
 
 function setup(){
  canvas = createCanvas(800,500);
@@ -11,45 +16,73 @@ function setup(){
  
  rows = floor(height/cell_size);
  cols = floor(width/cell_size);
- 
- tile = new Tile(0,0,cell_size*2,cell_size*2,[68, 102, 0],[102, 153, 0]);
- tile2 = new Tile(80,80,80,80,[77, 0, 153],[140, 26, 255]);
+
+
+ tiles.push(new Tile(0,0,cell_size*2,cell_size*2,[68, 102, 0],[102, 153, 0]));
+ tiles.push(new Tile(80,80,80,80,[77, 0, 153],[140, 26, 255]));
 }
 
 function draw(){
  background(40);
- 
- noFill();
- stroke(247, 255, 230);
- 
- for (let i=0; i<rows; i++){
-  for (let c=0; c<cols; c++){
-   rect(c * cell_size, i * cell_size, cell_size, cell_size);
-  }
+
+
+ // draw grid
+ if (show_grid){
+   noFill();
+   stroke(247, 255, 230);
+   for (let i=0; i<rows; i++){
+    for (let c=0; c<cols; c++){
+     rect(c * cell_size, i * cell_size, cell_size, cell_size);
+    }
+   }
  }
- 
- tile.update_position();
- tile.display();
- 
- tile2.update_position();
- tile2.display();
+
+// draw tiles
+tiles.forEach(function(tile){
+   tile.update_position();
+   tile.display();
+})
  
 }
 
 function mousePressed(){
- tile.drag();
- tile2.drag();
+
+tiles.forEach(function(tile){
+   tile.drag();
+})
 }
 
 function mouseReleased(){
- tile.end_drag();
- tile2.end_drag();
+
+tiles.forEach(function(tile){
+   tile.end_drag();
+})
 }
+
+toggle_grid_lines_btn.addEventListener("click", function(){
+   show_grid = !show_grid;
+})
+
+cell_size_input.addEventListener("change", function(){
+
+   cell_size = cell_size_input.value;
+
+   rows = floor(height/cell_size);
+   cols = floor(width/cell_size);
+
+   tiles.forEach(function(tile){
+      tile.cell_size = cell_size;
+   })
+})
+
+add_tile_btn.addEventListener("click", function(){
+   tiles.push(new Tile(0, 0, cell_size*2, cell_size*3, [0, 153, 153], [0, 204, 204]));
+})
 
 
 
 class Tile{
- constructor(x,y,w,h,c1,c2){
+ constructor(x=0,y=0,w,h,c1,c2){
   this.x = x;
   this.y = y;
   this.w = w;
@@ -57,8 +90,8 @@ class Tile{
   this.offset_x = 0;
   this.offset_y = 0;
   this.dragging = false;
-  this.c1 = c1;
-  this.c2 = c2;
+  this.c1 = c1; // resting color
+  this.c2 = c2; // color while dragging
   this.color = this.c1;
   this.cell_size = cell_size;
   
