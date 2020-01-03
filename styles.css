@@ -92,7 +92,8 @@ body {
   border: 2px solid var(--accent-color);
   position: relative;
   cursor: pointer;
-  margin: 5px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .project_screenshot {
@@ -131,7 +132,7 @@ body {
 .project_links{
   display: flex;
   width: 100%;
-  flex-wrap: true;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   position: absolute;
