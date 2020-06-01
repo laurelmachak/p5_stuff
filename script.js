@@ -9,6 +9,15 @@ let projects = [
     },
 
     {
+        "name": "Floating Particles",
+        "href": "floating_particles/index.html",
+        "description":
+            "Based on CodePen user @mamboleoo's 'How To Tutorial': 'Connected Vertices'",
+        "repo": "https://github.com/laurelmachak/p5_stuff/tree/master/floating_particles",
+        "img": "pics/floating_particles.png"
+    },
+
+    {
         "name": "Periodic Table",
         "href": "periodic_table/index.html",
         "description":
