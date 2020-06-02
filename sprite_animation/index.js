@@ -59,7 +59,7 @@ function draw() {
     // BELOW TODO: fix so correct sprite tiles are pointing in correct direction
 
     if (keyIsDown(LEFT_ARROW)){
-        character.x = (character.x - 2) % width;
+        character.x = (character.x - 2 + width) % width;
     }
 
     if (keyIsDown(DOWN_ARROW)){
@@ -67,7 +67,7 @@ function draw() {
     }
 
     if (keyIsDown(UP_ARROW)){
-        character.y = (character.y - 2) % height;
+        character.y = (character.y - 2 + height) % height;
     }
 
     
